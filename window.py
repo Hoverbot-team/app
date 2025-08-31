@@ -12,8 +12,10 @@ class window(QWidget):
         signalLayout = QHBoxLayout()
         self.signalStrengthLabel = QLabel(f"Signal Strength: {self.communication.getRssi()} dBm RSSI")#fix 0 when able
         self.protocolLabel = QLabel(f"Protocol: {self.communication.getProtocol()}")
+        self.statusLabel = QLabel(f"Status: {'Connected' if self.communication.getStatus() else 'Disconnected'}")
         signalLayout.addWidget(self.protocolLabel)        
         signalLayout.addWidget(self.signalStrengthLabel)
+        signalLayout.addWidget(self.statusLabel)
         self.layout.addLayout(signalLayout)
         self.layout.addStretch()
         self.setLayout(self.layout)
