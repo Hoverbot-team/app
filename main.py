@@ -1,5 +1,5 @@
 import sys
-
+from Communication import Communication
 from PyQt5.QtWidgets import QApplication
 
 from window import window
