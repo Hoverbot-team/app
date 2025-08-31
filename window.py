@@ -8,7 +8,7 @@ class window(QWidget):
         self.setWindowTitle("Hoverbot app")
         screen = QApplication.primaryScreen().size()
         self.setGeometry(100, 100, screen.width(), screen.height())
-        self.signalStrengthLabel = QLabel(f"Signal Strength: {0}")
+        self.signalStrengthLabel = QLabel(f"Signal Strength: {0}")#fix 0 when able
         self.layout.addWidget(self.signalStrengthLabel)
         self.setLayout(self.layout)
 
