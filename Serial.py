@@ -27,7 +27,6 @@ class Serial():
             if self.ser.in_waiting >= 7: 
                 data = self.ser.read(7)   
                 protocol, isConnected, Rssi, status = struct.unpack('=b?fB', data)
-                print(protocol, isConnected, Rssi, status)
                 dataReceive.Protocol = protocol
                 dataReceive.isConnected = isConnected
                 dataReceive.Rssi = Rssi

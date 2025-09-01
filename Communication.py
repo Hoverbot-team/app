@@ -30,7 +30,6 @@ class Communication:
     def __init__(self):
         self.protocol = Protocol
     def getProtocol(self):
-        print(Protocol[dataReceive.Protocol] and dataReceive.Protocol)
         return Protocol[dataReceive.Protocol]
     def getStatus(self):
         return dataReceive.isConnected
